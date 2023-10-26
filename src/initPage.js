@@ -1,3 +1,5 @@
+export default function pageInit() {
+
 const content = document.getElementById("content");
 
 // Create header
@@ -20,12 +22,9 @@ const contact = document.createElement('button');
 contact.setAttribute("id", "contact");
 contact.textContent = "Contact";
 
-
 // Create main
 const main = document.createElement('div');
-const info = document.createElement('h2');
-info.classList.add('info');
-info.textContent = "Join us for the best burgers in the universe and the 3rd best fries in the milkyway!"
+main.setAttribute("id", "main");
 
 // Append children
 header.appendChild(title);
@@ -34,9 +33,9 @@ nav.appendChild(home);
 nav.appendChild(menu);
 nav.appendChild(contact);
 
-main.appendChild(info);
 
 content.appendChild(header);
 content.appendChild(nav);
 content.appendChild(main);
+}
 
